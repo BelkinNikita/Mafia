@@ -1,0 +1,20 @@
+[project]
+name = "mafia"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+
+[tool.setuptools.package.find]
+where = ["src"]
+
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi[standard]>=0.143.3",
+]
+
+[project.scripts]
+mafia = "mafia:main"
+
+[build-system]
+requires = ["uv_build>=0.13.0,<0.14.0"]
+build-backend = "uv_build"
